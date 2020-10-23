@@ -11,15 +11,15 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', redirect: '/coaches' },
-    { path: '/coaches', components: CoachesList },
+    { path: '/coaches', component: CoachesList },
     {
       path: '/coaches/:id',
-      components: CoachDetail,
-      children: [{ path: 'contact', components: ContactCoach }] // /coaches/Cid/contact
+      component: CoachDetail,
+      children: [{ path: 'contact', component: ContactCoach }] // /coaches/Cid/contact
     },
-    { path: '/register', components: CoachRegistration },
-    { path: '/requests', components: RequestsReceived },
-    { path: '/:notFound(.*)', components: NotFound }
+    { path: '/register', component: CoachRegistration },
+    { path: '/requests', component: RequestsReceived },
+    { path: '/:notFound(.*)', component: NotFound }
   ]
 });
 
