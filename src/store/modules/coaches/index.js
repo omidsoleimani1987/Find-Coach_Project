@@ -11,7 +11,7 @@ export default {
           id: 'c1',
           firstName: 'Maximilian',
           lastName: 'Soleimani',
-          areas: ['frontend', 'backend', 'career'],
+          areas: ['backend', 'career'],
           description:
             "I'm Maximilian and I've worked as a freelance web developer for years. Let me help you become a developer as well!",
           hourlyRate: 40
