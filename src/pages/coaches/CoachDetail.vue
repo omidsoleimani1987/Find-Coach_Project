@@ -10,7 +10,9 @@
       <base-card>
         <header>
           <h2>Interested? Reach out now!</h2>
-          <base-button link :to="contactLink">Contact</base-button>
+          <base-button link :to="contactLink" v-if="checkContactbutton"
+            >Contact</base-button
+          >
         </header>
         <router-view></router-view>
       </base-card>
@@ -41,7 +43,12 @@ export default {
       return this.selectedCoach.firstName + ' ' + this.selectedCoach.lastName;
     },
     contactLink() {
-      return this.$route.path + '/' + this.id + '/contact';
+      return this.$route.path + '/contact';
+    },
+    checkContactbutton() {
+      const path = this.$route.path;
+      const route = path.slice(-8);
+      return route !== '/contact';
     }
   },
   created() {
