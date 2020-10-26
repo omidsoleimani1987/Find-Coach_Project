@@ -46,6 +46,7 @@ export default {
       };
 
       this.$store.dispatch('requests/contactCoach', requestMessage);
+
       this.$router.replace('/coaches');
     }
   }
